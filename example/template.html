@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Kosmos Styleguide Template</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Sans" />
+    <link rel="stylesheet" href="../dist/css/kosmos-style.css">
+    <link rel="stylesheet" href="../dist/css/custom.css">
+    <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <nav id="topnav" class="navbar"></nav>
     <div id="wrapper" class="row">
-        <div id="sidebar"></div>
-        <div id="content" class="col">
+        <div id="sidebar" class="col-md-3 bg-dark text-white">
+            <div id="logo"/>
+            <a href="/"><img src="../images/cropped-Kosmos_blau_transp_150-2.png"/></a>
+            </div>
+            <nav>
+                <ul class="nav flex-column">
+                    <li class="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
+                        <small>SECTION HEADING</small>
+                    </li>
+                    <li class="nav-item active"><a class="bg-dark list-group-item list-group-item-action flex-column align-items-start nav-link active" href="#">Active</a></li>
+                    <li class="nav-item"><a class="bg-dark list-group-item list-group-item-action flex-column align-items-start nav-link" href="#">Link</a></li>
+                    <li class="nav-item"><a class="bg-dark list-group-item list-group-item-action flex-column align-items-start nav-link" href="#">Link</a></li>
+                    <li class="nav-item"><a class="bg-dark list-group-item list-group-item-action flex-column align-items-start nav-link" href="#">Link</a></li>
+                </ul>
+            </nav>
+            </div>
+        <div id="main" class="col-md-9">
+            <nav id="topnav"></nav>
             <h1>KOSMoS Styleguide</h1>
         </div>
     </div>

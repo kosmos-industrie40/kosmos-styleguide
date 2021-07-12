@@ -1,4 +1,11 @@
 @import 'http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css';
+/* General Styles */
+h1,h2,h3,h4,h5,h6{
+    font-family: "Droid Sans", sans-serif;
+    color: #004e9e;
+}
+
+
 
 /* Main Containers */
 #body-row {
