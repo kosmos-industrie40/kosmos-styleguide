@@ -1,0 +1,13 @@
+.card {
+  .card-header {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: 1.25rem;
+      margin-bottom: 0;
+      color: $card-heading-color;
+    }
+  }
+
+  .card-footer {
+
+  }
+}
