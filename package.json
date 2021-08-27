@@ -1,17 +1,25 @@
 {
   "name": "kosmos-styleguide",
   "description": "A css/js style framework for KOSMoS. Based on bootstrap 4.6.",
-  "version": "0.1",
+  "version": "0.0.1",
   "author": "Elena Schediwie eschediwie@inovex.de",
   "devDependencies": {
     "bootstrap": "4.6.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
+    "find-unused-sass-variables": "^3.1.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
+    "lockfile-lint": "^4.6.2",
     "node-sass": "^6.0.0",
-    "stylelint": "^13.13.1"
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
     "bootstrap": "4.6.0",
+    "csslint": "^1.0.5",
     "develop": "^1.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0"
