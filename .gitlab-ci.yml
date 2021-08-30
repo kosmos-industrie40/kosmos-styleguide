@@ -1,0 +1,15 @@
+stages:
+- build
+
+image: node:slim
+
+buid:
+        stage: build
+        tags:
+        - shared
+        script:
+        - npm install
+        - npm run css-compile
+        artifacts:
+                paths:
+                - dist/*
