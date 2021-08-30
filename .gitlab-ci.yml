@@ -18,7 +18,7 @@ lint:
         script:
         - npm run lint
 
-buid:
+build:
         stage: build
         only:
         - master
