@@ -55,4 +55,28 @@ npm run css-watch
 
 If you are using a different css framework (i.e. Material UI), locate the equivalent of the `_varibles.scss` in your framework. Rename and integrate the definitions from this style guide to achieve a similar look.
 
+Linting
+------------------
+
+For linting .scss, .css and .sass files, the  [stylelint](https://github.com/stylelint/stylelint) package can be used.
+
+You can install it using the following commands:
+```console
+npm install --save-dev stylelint stylelint-config-standard
+```
+
+and to use it run:
+```console
+npx stylelint "scss/*"
+```
+
+For the .js files, eslint can be used. Install it with the following command:
+```console
+npm install eslint --save-dev
+```
+
+and run it with:
+```console
+npx eslint dist/js/*
+```
 
