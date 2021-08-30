@@ -17,6 +17,8 @@ lint:
 
 buid:
         stage: build
+        only:
+        - master
         tags:
         - shared
         script:
