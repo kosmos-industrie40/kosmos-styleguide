@@ -1,7 +1,19 @@
 stages:
+- lint
 - build
 
 image: node:slim
+
+lint:
+        stage: lint
+        tags:
+        - shared
+        script:
+        - npm install
+        - npm install npm-run-all
+        - npm install eslint
+        - npm install lockfile-lint
+        - npm install fusv
 
 buid:
         stage: build
