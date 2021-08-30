@@ -13,7 +13,7 @@ lint:
         - npm install npm-run-all
         - npm install eslint
         - npm install lockfile-lint
-        - npm install fusv
+        - npm run lint
 
 buid:
         stage: build
