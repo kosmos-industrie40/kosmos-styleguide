@@ -5,13 +5,21 @@
   "author": "Elena Schediwie eschediwie@inovex.de",
   "devDependencies": {
     "bootstrap": "4.6.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
+    "find-unused-sass-variables": "^3.1.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
+    "lockfile-lint": "^4.6.2",
     "node-sass": "^6.0.0",
-    "stylelint": "^13.13.1"
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   },
   "dependencies": {
     "bootstrap": "4.6.0",
+    "csslint": "^1.0.5",
     "develop": "^1.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.0",
@@ -22,8 +30,8 @@
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/css/",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
-    "css-lint-stylelint": "stylelint \"**/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
-    "css-lint-vars": "fusv scss/ site/assets/scss/",
+    "css-lint-stylelint": "stylelint \"scss/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
+    "css-lint-vars": "fusv scss/",
     "css-minify": "cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap.min.css dist/css/bootstrap.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-grid.min.css dist/css/bootstrap-grid.css && cleancss -O1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/bootstrap-reboot.min.css dist/css/bootstrap-reboot.css",
     "css-prefix": "npm-run-all --parallel css-prefix-*",
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",

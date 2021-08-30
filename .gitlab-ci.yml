@@ -1,10 +1,27 @@
 stages:
+- lint
 - build
 
 image: node:slim
 
+lint:
+        stage: lint
+        tags:
+        - shared
+        before_script:
+        - npm install
+        - npm install npm-run-all
+        - npm install eslint
+        - npm install lockfile-lint
+        - npm install stylelint-config-standard 
+        - npm install eslint-config-google
+        script:
+        - npm run lint
+
 buid:
         stage: build
+        only:
+        - master
         tags:
         - shared
         script:

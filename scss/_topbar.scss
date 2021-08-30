@@ -2,25 +2,23 @@
 // CSS-Styles for the navigation bar at the top of the page
 //
 
-
 .topbar {
-    height: 65px;
-    background-color: $gray-300;
-    border-bottom: 5px solid $cyan;
+  height: 65px;
+  background-color: $gray-300;
+  border-bottom: 5px solid $cyan;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .navbar {
+    margin-left: auto;
+  }
 
-    .navbar {
-        margin-left: auto;
+  .topbar_search {
+    button {
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid $input-border-color;
+      border-left: none;
     }
-
-    .topbar_search {
-        button {
-            background-color: rgba(0,0,0,0);
-            border: 1px solid $input-border-color;
-            border-left: none;
-        }
-    }
+  }
 }
