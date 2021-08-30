@@ -8,11 +8,14 @@ lint:
         stage: lint
         tags:
         - shared
-        script:
+        before_script:
         - npm install
         - npm install npm-run-all
         - npm install eslint
         - npm install lockfile-lint
+        - npm install stylelint-config-standard 
+        - npm install eslint-config-google
+        script:
         - npm run lint
 
 buid:
