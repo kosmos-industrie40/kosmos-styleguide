@@ -29,7 +29,7 @@
     -webkit-align-items: center;
     justify-content: center;
     background-color: $gray-300;
-    border-bottom: 5px solid $cyan;
+    border-bottom: 5px solid $secondary;
   }
 
   .visible {
@@ -45,7 +45,7 @@
     flex: 1 1 auto;
     padding: 1rem 0 0 0;
     background-color: $dark;
-    overflow-y: auto;
+    overflow-y: visible;
 
     nav:not(:first-child) {
       margin-top: 2rem;
@@ -67,19 +67,7 @@
       text-shadow: 1px 1px #000;
     }
 
-    ul {
-      display: block;
-      margin: 10px 0 0 0;
-      padding: 0;
-      list-style: none;
-
-      li {
-        display: block;
-        width: 100%;
-        padding: 0;
-        cursor: pointer;
-
-        a {
+    a {
           display: block;
           padding: 0.75rem 1rem;
           margin-bottom: 5px;
@@ -100,16 +88,28 @@
         }
 
         a.active {
-          border-right: 5px solid $cyan;
+          border-right: 5px solid $secondary;
         }
 
+    ul {
+      display: block;
+      margin: 10px 0 0 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: block;
+        width: 100%;
+        padding: 0;
+        cursor: pointer;
+
         .collapse:not(.show) {
-          display: none;
+          display: none !important;
         }
 
         ul.show {
           display: block;
-          border-right: 5px solid $cyan;
+          border-right: 5px solid $secondary;
         }
       }
 
@@ -191,7 +191,6 @@
     }
 
     ul > li > ul {
-      border: 1px solid red;
       display: block;
       position: absolute;
       top: 0;
@@ -205,6 +204,22 @@
       left: 100%;
       top: 0;
       z-index: 9999;
+      background-color: $dark;
+      border-right: none;
+      border-left: 5px solid $secondary;
+
+      li {
+        padding-left: 0;
+        background-color: rgba(255, 255, 255, 0.06);
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        a {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
