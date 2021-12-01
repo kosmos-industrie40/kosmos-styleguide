@@ -68,28 +68,28 @@
     }
 
     a {
-          display: block;
-          padding: 0.75rem 1rem;
-          margin-bottom: 5px;
-          color: $gray-100;
-          font-family: "Helvetica", sans-serif;
-          font-size: 10pt;
-          font-weight: 500;
-          text-decoration: none;
+      display: block;
+      padding: 0.75rem 1rem;
+      margin-bottom: 5px;
+      color: $gray-100;
+      font-family: "Helvetica", sans-serif;
+      font-size: 10pt;
+      font-weight: 500;
+      text-decoration: none;
 
-          .fa {
-            font-size: 18px;
-            padding-right: 0.5rem;
-          }
+      .fa {
+        font-size: 18px;
+        padding-right: 0.5rem;
+      }
 
-          .sidebar_menu_controls {
-            font-size: 10px;
-          }
-        }
+      .sidebar_menu_controls {
+        font-size: 10px;
+      }
+    }
 
-        a.active {
-          border-right: 5px solid $secondary;
-        }
+    a.active {
+      border-right: 5px solid $secondary;
+    }
 
     ul {
       display: block;
