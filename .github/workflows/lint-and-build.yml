@@ -1,0 +1,55 @@
+name: Lint & Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  run-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Setup node 17
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17.4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint Code Base
+        run: npm run lint
+
+  run-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Setup node 17
+        uses: actions/setup-node@v1
+        with:
+          node-version: 17.4
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Code Base
+        run: chmod 777 . -R && npm run css-compile
+
+      - name: Add js
+        run: cp assets/* dist -r
+        
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2.3.1
+        with:
+          name: dist
+          path: dist/*

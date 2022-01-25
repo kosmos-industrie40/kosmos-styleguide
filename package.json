@@ -2,7 +2,7 @@
   "name": "kosmos-styleguide",
   "description": "A css/js style framework for KOSMoS. Based on bootstrap 4.6.",
   "version": "0.0.1",
-  "author": "Elena Schediwie eschediwie@inovex.de",
+  "author": "Bjarne Rest <bjarne.rest@inovex.de>",
   "devDependencies": {
     "bootstrap": "4.6.0",
     "cross-env": "^7.0.3",
@@ -15,15 +15,14 @@
     "node-sass": "^6.0.0",
     "npm-run-all": "^4.1.5",
     "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^22.0.0"
+    "stylelint-config-standard": "^22.0.0",
+    "csslint": "^1.0.5",
+    "eslint-config-google": "^0.14.0"
   },
   "dependencies": {
     "bootstrap": "4.6.0",
-    "csslint": "^1.0.5",
-    "develop": "^1.0.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.6.0",
-    "npm-run-all": "^4.1.5"
+    "jquery": "^3.6.0"
   },
   "scripts": {
     "start": "npm-run-all --parallel watch docs-serve",
@@ -43,7 +42,7 @@
     "js-compile-bundle": "rollup --environment BUNDLE:true --config build/rollup.config.js --sourcemap",
     "js-compile-plugins": "node build/build-plugins.js",
     "js-compile-plugins-coverage": "cross-env NODE_ENV=test node build/build-plugins.js",
-    "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
+    "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives --no-error-on-unmatched-pattern \"**/*.{js,jsx}\"",
     "js-minify": "npm-run-all --parallel js-minify-*",
     "js-minify-standalone": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/bootstrap.js.map,includeSources,url=bootstrap.min.js.map\" --output dist/js/bootstrap.min.js dist/js/bootstrap.js",
     "js-minify-bundle": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/bootstrap.bundle.js.map,includeSources,url=bootstrap.bundle.min.js.map\" --output dist/js/bootstrap.bundle.min.js dist/js/bootstrap.bundle.js",

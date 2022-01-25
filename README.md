@@ -8,6 +8,7 @@ A customized bootstrap theme for KOSMos front end applications and dashboards.
 
 1. The **Node.js** framework can be installed using a ditribution package for your specific OS, or can be downloaded 
 from [https://nodejs.org/](https://nodejs.org/).
+> We support version Node v17.4.0
 2. The **npm** package manager.
 
 ```console
@@ -67,32 +68,6 @@ npm run css-watch
 If you are using a different css framework (i.e. Material UI), locate the equivalent of the `_varibles.scss` in your framework. Rename and integrate the definitions from this style guide to achieve a similar look.
 
 ## Linting
-
-For linting .scss, .css and .sass files, the  [stylelint](https://github.com/stylelint/stylelint) package can be used.
-
-You can install it using the following commands:
-
-```console
-npm install --save-dev stylelint stylelint-config-standard
-```
-
-and to use it run:
-
-```console
-npx stylelint "scss/*"
-```
-
-For the .js files, eslint can be used. Install it with the following command:
-
-```console
-npm install eslint eslint-config-google --save-dev
-```
-
-and run it with:
-
-```console
-npx eslint dist/js/*
-```
 
 To check all linting you can also execute the following command. This will also check the lockfile with `lockfile-lint`.
 

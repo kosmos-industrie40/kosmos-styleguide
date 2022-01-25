@@ -1,32 +1,31 @@
 stages:
-- lint
-- build
+  - lint
+  - build
 
-image: node:slim
+image: node:17.4.0
 
 lint:
-        stage: lint
-        tags:
-        - shared
-        before_script:
-        - npm install
-        - npm install npm-run-all
-        - npm install eslint
-        - npm install lockfile-lint
-        - npm install stylelint-config-standard 
-        - npm install eslint-config-google
-        script:
-        - npm run lint
+  stage: lint
+  tags:
+    - shared
+  before_script:
+    - npm install
+  script:
+    - npm run lint
 
 build:
-        stage: build
-        only:
-        - master
-        tags:
-        - shared
-        script:
-        - npm install
-        - npm run css-compile
-        artifacts:
-                paths:
-                - dist/*
+  stage: build
+  only:
+    refs:
+      - main
+      - merge_requests # to test
+  tags:
+    - shared
+  before_script:
+    - npm install
+  script:
+    - npm run css-compile
+    - cp assets/* dist -r
+  artifacts:
+    paths:
+      - dist/*
