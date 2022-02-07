@@ -1,7 +1,7 @@
 {
   "name": "kosmos-styleguide",
   "description": "A css/js style framework for KOSMoS. Based on bootstrap 4.6.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Bjarne Rest <bjarne.rest@inovex.de>",
   "devDependencies": {
     "bootstrap": "4.6.0",
@@ -28,6 +28,7 @@
     "start": "npm-run-all --parallel watch docs-serve",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o dist/css/",
+    "css-compile-output": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/ -o $output",
     "css-lint": "npm-run-all --continue-on-error --parallel css-lint-*",
     "css-lint-stylelint": "stylelint \"scss/*.{css,scss}\" --cache --cache-location .cache/.stylelintcache --rd",
     "css-lint-vars": "fusv scss/",
@@ -76,6 +77,7 @@
   "files": [
     "dist/{css,js}/*.{css,js,map}",
     "js/{src,dist}/**/*.{js,map}",
-    "scss/**/*.scss"
+    "scss/**/*.scss",
+    "scss/**/*.sass"
   ]
 }
